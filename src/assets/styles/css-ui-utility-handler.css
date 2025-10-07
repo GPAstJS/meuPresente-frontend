@@ -1,0 +1,40 @@
+#end::before {
+    background: transparent;
+}
+
+.steps-horizontal .step::before:nth-child(3) {
+    background: transparent;
+}
+
+.steps .step::after {
+    height: 32rem;
+    width: 32rem;
+    background: var(--default-purple);
+}
+
+.steps-vertical .step::before {
+    width: 2rem;
+    height: 100rem;
+    transform: translateY(-100rem);
+}
+
+.steps .step::before {
+    transform: translateX(65rem);
+    background: #000;
+}
+
+.steps .step-primary + .step-primary::before {
+    background: var(--default-purple);
+}
+
+@media (min-width: 540px) {
+    #end::before {
+        background: #000;
+    }
+
+    .sm\:steps-vertical .step::before {
+        width: 2rem;
+        height: 100rem;
+        transform: translateY(-100rem);
+    }
+}
